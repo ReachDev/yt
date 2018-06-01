@@ -58,8 +58,8 @@ module Yt
       @params = options.fetch :params, {}
       # Note: This is to be invoked by auth-only YouTube APIs.
       @params[:key] = options[:api_key] if options[:api_key]
-      @params["start-date"] =  @params["start-date"].strftime('%Y-%m-%d') if @params["start-date"].present?
-      @params["end-date"] =  @params["end-date"].strftime('%Y-%m-%d') if @params["end-date"].present?
+      @params["startDate"] =  @params["startDate"].strftime('%Y-%m-%d') if @params["startDate"].present?
+      @params["endDate"] =  @params["endDate"].strftime('%Y-%m-%d') if @params["endDate"].present?
       # Note: This is to be invoked by all YouTube API except Annotations,
       # Analyitics and Uploads
       camelize_keys! @params if options.fetch(:camelize_params, true)
